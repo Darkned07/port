@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+  main {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    .content {
+      font-family: "Inter";
+      max-width: 400px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(31, 31, 31);
+      gap: 24px;
+      .content__one {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .content__one__image {
+          width: 88px;
+          height: 88px;
+          margin-bottom: 24px;
+          border-radius: 100%;
+          object-fit: cover;
+        }
+        .content__one__title {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 150%;
+          color: white;
+          margin-bottom: 4px;
+        }
+        .content__one__description {
+          color: rgb(196, 248, 42);
+          font-size: 14px;
+          text-align: center;
+          font-weight: 700;
+          line-height: 150%;
+        }
+        .content__one__jobs__about {
+          margin-top: 24px;
+          font-size: 14px;
+          font-weight: 400;
+          color: white;
+          line-height: 150%;
+        }
+      }
+      .content__two {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+        .content__two__btn__link__a {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          background-color: rgb(51, 51, 51);
+          text-align: center;
+          color: white;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 150%;
+          text-decoration: none;
+          border-radius: 8px;
+          &:hover {
+            color: rgb(51, 51, 51);
+            background-color: rgb(196, 248, 42);
+            transition: ease-in-out;
+            transition-duration: 600ms;
+          }
+        }
+      }
+    }
+  }
+}
