@@ -4,8 +4,22 @@
   padding: 0;
 }
 
+:root {
+  --color: white;
+  --back: rgb(20, 20, 20);
+  --bac: rgb(31, 31, 31);
+  --back-col: rgb(51, 51, 51);
+}
+
+.dark-mode {
+  --color: black;
+  --back: rgb(230, 230, 230);
+  --bac: rgb(200, 200, 200);
+  --back-col: rgb(180, 180, 180);
+}
+
 body {
-  background-color: rgb(20, 20, 20);
+  background-color: var(--back);
   main {
     display: grid;
     min-height: 100vh;
@@ -20,7 +34,7 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgb(31, 31, 31);
+      background-color: var(--bac);
       gap: 24px;
       .content__one {
         display: flex;
@@ -37,7 +51,7 @@ body {
           font-size: 24px;
           font-weight: 600;
           line-height: 150%;
-          color: white;
+          color: var(--color);
           margin-bottom: 4px;
         }
         .content__one__description {
@@ -51,7 +65,7 @@ body {
           margin-top: 24px;
           font-size: 14px;
           font-weight: 400;
-          color: white;
+          color: var(--color);
           line-height: 150%;
         }
       }
@@ -60,19 +74,38 @@ body {
         flex-direction: column;
         width: 100%;
         gap: 16px;
+        .content__two__btn__link__a_btn {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          background-color: var(--back-col);
+          text-align: center;
+          color: var(--color);
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 150%;
+          text-decoration: none;
+          border-radius: 8px;
+          cursor: pointer;
+          &:hover {
+            color: var(--back-col);
+            background-color: rgb(196, 248, 42);
+            transition: ease-in-out;
+            transition-duration: 600ms;
+          }
+        }
         .content__two__btn__link__a {
           padding-top: 12px;
           padding-bottom: 12px;
-          background-color: rgb(51, 51, 51);
+          background-color: var(--back-col);
           text-align: center;
-          color: white;
+          color: var(--color);
           font-weight: 700;
           font-size: 14px;
           line-height: 150%;
           text-decoration: none;
           border-radius: 8px;
           &:hover {
-            color: rgb(51, 51, 51);
+            color: var(--back-col);
             background-color: rgb(196, 248, 42);
             transition: ease-in-out;
             transition-duration: 600ms;
